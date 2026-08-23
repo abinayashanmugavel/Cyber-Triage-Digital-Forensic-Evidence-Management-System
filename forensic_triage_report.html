@@ -1,0 +1,4919 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ares Forensic Triage Report</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        h1 {
+            padding: 20px;
+            background: #1f2937;
+            color: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        th {
+            background: #e5e7eb;
+        }
+
+        .summary {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            border: 1px solid #ddd;
+        }
+
+        .high {
+            font-weight: bold;
+        }
+
+        .medium {
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+        Ares Forensic Triage Report
+    </h1>
+
+    <p>
+        Generated:
+        2026-08-23 17:32:33
+    </p>
+
+    <div class="summary">
+
+        <div class="card">
+            <strong>Total Processes</strong>
+            <br>
+            311
+        </div>
+
+        <div class="card">
+            <strong>Network Connections</strong>
+            <br>
+            161
+        </div>
+
+        <div class="card">
+            <strong>High Severity</strong>
+            <br>
+            0
+        </div>
+
+        <div class="card">
+            <strong>Medium Severity</strong>
+            <br>
+            2
+        </div>
+
+    </div>
+
+    <h2>
+        System Metadata
+    </h2>
+
+    <table>
+
+        
+            <tr>
+                <th>Hostname</th>
+                <td>HPLAP</td>
+            </tr>
+            
+            <tr>
+                <th>OS</th>
+                <td>Windows</td>
+            </tr>
+            
+            <tr>
+                <th>OS Release</th>
+                <td>11</td>
+            </tr>
+            
+            <tr>
+                <th>OS Version</th>
+                <td>10.0.26200</td>
+            </tr>
+            
+            <tr>
+                <th>Architecture</th>
+                <td>AMD64</td>
+            </tr>
+            
+            <tr>
+                <th>Boot Time</th>
+                <td>2026-08-21 08:26:16</td>
+            </tr>
+            
+            <tr>
+                <th>CPU Count</th>
+                <td>12</td>
+            </tr>
+            
+            <tr>
+                <th>RAM</th>
+                <td>15.65 GB</td>
+            </tr>
+            
+
+    </table>
+
+    <h2>
+        Running Processes
+    </h2>
+
+    <table>
+
+        <tr>
+            <th>PID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Executable Path</th>
+            <th>SHA256</th>
+            <th>Severity</th>
+            <th>Reason</th>
+            <th>VirusTotal</th>
+        </tr>
+
+        
+            <tr>
+                <td>5740</td>
+                <td>CodeSetup-stable-110a328ea54b42367b803ec53ee0bf52ef26b419.tmp</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Temp\is-0R1IV.tmp\CodeSetup-stable-110a328ea54b42367b803ec53ee0bf52ef26b419.tmp</td>
+                <td>0d2c953cb9eefa170ce9cc9ef466cca2db38d6529f2a95980d3c6876852340d5</td>
+                <td>Medium</td>
+                <td>Executable located in a potentially risky directory</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23780</td>
+                <td>CodeSetup-stable-110a328ea54b42367b803ec53ee0bf52ef26b419.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Temp\vscode-stable-user-x64\CodeSetup-stable-110a328ea54b42367b803ec53ee0bf52ef26b419.exe</td>
+                <td>d564bc373ed3d94eedc813d5c0865e4ef40a40323e856bc838ae5a29723f2fb9</td>
+                <td>Medium</td>
+                <td>Executable located in a potentially risky directory</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>0</td>
+                <td>System Idle Process</td>
+                <td>NT AUTHORITY\SYSTEM</td>
+                <td></td>
+                <td>N/A</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>188</td>
+                <td>Unknown</td>
+                <td>Unknown</td>
+                <td></td>
+                <td>N/A</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>232</td>
+                <td>Registry</td>
+                <td>Unknown</td>
+                <td>Registry</td>
+                <td>N/A</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>NT AUTHORITY\SYSTEM</td>
+                <td></td>
+                <td>N/A</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1336</td>
+                <td>WidgetBoard.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_526.21100.40.0_x64__cw5n1h2txyewy\WidgetBoard.exe</td>
+                <td>53d3e7a527b7bc6ef1d0a6f9336b288cbb31b2805c8c6905ee2375061464716e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1364</td>
+                <td>AppActions.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\AppActions.exe</td>
+                <td>460d0bee432ccaa7395da62b7b8cd7b85bb86f7177fd35cea123d4b8d14d4825</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1588</td>
+                <td>csrss.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\csrss.exe</td>
+                <td>a958083fd4982697973d1f4a05a8f51b1f5d551a558cfa0097cfb6867fdce3ba</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1852</td>
+                <td>lsass.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\lsass.exe</td>
+                <td>4e5a87527feb441b55fa1f14239b1ece6ede888e26eaa9757340244dd9f9f05d</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1904</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>876</td>
+                <td>smss.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\smss.exe</td>
+                <td>21b2cf9a8479818cdce2c29d99ee61bde07095210d7ad560bb0908ae87905779</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1224</td>
+                <td>StartMenuExperienceHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe</td>
+                <td>028682be7d4a614cce4314be919aa17fa1191ef2b4388e94f9e0d640ab2e66cd</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1972</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1992</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1836</td>
+                <td>LsaIso.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\LsaIso.exe</td>
+                <td>c6d056926edf6c5b531f1bb58a366794f95446bf35e40cf51c069bd068d0c967</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2064</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2108</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1676</td>
+                <td>wininit.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\wininit.exe</td>
+                <td>a497eec9d1436af978d86fd15024937b21acd62e31e3ba4751c704ab13246aff</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2040</td>
+                <td>WUDFHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\WUDFHost.exe</td>
+                <td>f2a12a2fb900d06cfed2f9cc613440d92716acd2bfae6031e40a62aaeb8f2f1a</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2164</td>
+                <td>WUDFHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\WUDFHost.exe</td>
+                <td>f2a12a2fb900d06cfed2f9cc613440d92716acd2bfae6031e40a62aaeb8f2f1a</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1824</td>
+                <td>services.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\services.exe</td>
+                <td>ec6674673bafea6dc621530910d5923c6e51dff689d211428bd9527b208716b4</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2500</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2276</td>
+                <td>WUDFHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\WUDFHost.exe</td>
+                <td>f2a12a2fb900d06cfed2f9cc613440d92716acd2bfae6031e40a62aaeb8f2f1a</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2520</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2028</td>
+                <td>fontdrvhost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\fontdrvhost.exe</td>
+                <td>d95f4bcdc09eadeb6f2afc9befef1d1a309c9fc72a6d3452871a7d0b7a59134d</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2528</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2536</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2552</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2664</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2792</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2196</td>
+                <td>SearchFilterHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\SearchFilterHost.exe</td>
+                <td>ee0c3c4d91e12a4675c9ed54d9a490545be769a3419675dc03e8205eeac2af36</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1960</td>
+                <td>wps.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPSOFF~1\1210~1.280\office6\wps.exe</td>
+                <td>ed49a90969f576124307b519c126cc27ce97f5faa4a9d12a63faa19c4d994ad5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2820</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2804</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2812</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2932</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3084</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2956</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3192</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3272</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3068</td>
+                <td>IntelCpHDCPSvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_c9b9aa9621425518\IntelCpHDCPSvc.exe</td>
+                <td>47d1497d135f96558a478aeda19aaeb8fdfef8c8c8b832a3e7d805a981a9a26c</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3428</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3500</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3528</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3572</td>
+                <td>OneDrive.Sync.Service.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Microsoft OneDrive\26.145.0728.0010\OneDrive.Sync.Service.exe</td>
+                <td>5560c4b9559498b2f8d6bd2f9332fd42b9f6ce452b8a8d855f4be739bf22dd20</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1160</td>
+                <td>RtkAudUService64.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_ef58a27152e818c4\RtkAudUService64.exe</td>
+                <td>43ebd9df4b8f2a2a02475bdb76df95f8ea8ce73ccf1e7a0bcb77dd34bab00a94</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3828</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3924</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3956</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3964</td>
+                <td>wsc_proxy.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\wsc_proxy.exe</td>
+                <td>79e53d36a40951ab328e153bac9c1e3adf3330b45899345e645889b9046f06e0</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2296</td>
+                <td>RtkAudUService64.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_ef58a27152e818c4\RtkAudUService64.exe</td>
+                <td>43ebd9df4b8f2a2a02475bdb76df95f8ea8ce73ccf1e7a0bcb77dd34bab00a94</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3972</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4068</td>
+                <td>MemCompression</td>
+                <td>Unknown</td>
+                <td>MemCompression</td>
+                <td>N/A</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3980</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4132</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4144</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4168</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4188</td>
+                <td>TouchpointAnalyticsClientService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\hpanalyticscomp.inf_amd64_ef460d1f2a35fc16\x64\TouchpointAnalyticsClientService.exe</td>
+                <td>84c6487aef9d10715b79556c77feda867999b6307df1e36d88a98e0c5e58cb39</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4200</td>
+                <td>SysInfoCap.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\hpcustomcapcomp.inf_amd64_166246cb8bd387ff\x64\SysInfoCap.exe</td>
+                <td>75b0666cc68878e0ad7bc286e3119f43f0156fe10b62f35e35bed3f625f9c9c5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4216</td>
+                <td>AppHelperCap.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\hpcustomcapcomp.inf_amd64_166246cb8bd387ff\x64\AppHelperCap.exe</td>
+                <td>e223d6ba819f655b790bf8f3a847e6b1923c24720cb9351b17fcbe0b9c76cb44</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2764</td>
+                <td>mscopilot.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot.exe</td>
+                <td>d01e72206fca3090a4e68ecc64fdc27dbb6a70507665874e47fa077056b718fc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4340</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3412</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4480</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4224</td>
+                <td>DiagsCap.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\hpcustomcapcomp.inf_amd64_166246cb8bd387ff\x64\DiagsCap.exe</td>
+                <td>8259e31468deccdf9b48a6456d46cbeb815737ccc043a560f819ba4ad25ca605</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3456</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4672</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4772</td>
+                <td>python.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Python\Python314\python.exe</td>
+                <td>03168c01b7b7491423350e82c26fee71f35b43694d1319d3c668bda6903a0c38</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4808</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4908</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4956</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5024</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5152</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4572</td>
+                <td>OpenConsole.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\a5b5009513\resources\app\node_modules.asar.unpacked\node-pty\build\Release\conpty\OpenConsole.exe</td>
+                <td>69b5cb526df4e83480193569fa3353f538de323b74ddfebc76c78c637d071185</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3804</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5180</td>
+                <td>ipfsvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\dtt_sw.inf_amd64_f535b4ce79945857\ipfsvc.exe</td>
+                <td>ab20d670f85fe2915ce93ab493c74de5c9f4103964d2fbd882eaa224c43363e6</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5204</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5220</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5312</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5356</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5272</td>
+                <td>MsMpEng.exe</td>
+                <td>Unknown</td>
+                <td>C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26070.9-0\MsMpEng.exe</td>
+                <td>212ac17c30c33190acdcae645af2ea5131e2e6f17bf4516777c108bdea5f7578</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5424</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\AvastSvc.exe</td>
+                <td>c499c5c382e8cad913a66b3ebe49415d21c6fe25395c9a36efd42b2796eb0231</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5532</td>
+                <td>ctfmon.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\ctfmon.exe</td>
+                <td>cb101a3d2158d521bf150ed0b83a4f0b33a0a858eaf2304bd336bc5dc6193b75</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4436</td>
+                <td>hp-one-agent-service.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\HP\HP One Agent\hp-one-agent-service.exe</td>
+                <td>520b9b5436a7a15c522ab43a0403a100762a4721ba5b66472f87f9dc9dcea003</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5560</td>
+                <td>dasHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\dasHost.exe</td>
+                <td>6669401b1a5094796ee8581b8a370b27ca41ce61a8a0876e7c02db6cc9534f24</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5708</td>
+                <td>ShellExperienceHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe</td>
+                <td>0939a7eed05e1750058dc21ec95ef6bd2c47b7e4eec6922f60a7e0b449c8c7b1</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5952</td>
+                <td>cmd.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\cmd.exe</td>
+                <td>8dd1ebb0b969370c70a5ee7f7ee347949aa7046aa5e1a33fcd7b1e9415b21fc3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5976</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4756</td>
+                <td>RtkAudUService64.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_ef58a27152e818c4\RtkAudUService64.exe</td>
+                <td>43ebd9df4b8f2a2a02475bdb76df95f8ea8ce73ccf1e7a0bcb77dd34bab00a94</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6036</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6096</td>
+                <td>unsecapp.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\wbem\unsecapp.exe</td>
+                <td>16d01ae8ae611dbe5934932e0bda099d9b2f4732c3d2e7dd9b3a96671c3bb209</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>4544</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6196</td>
+                <td>aswToolsSvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\aswToolsSvc.exe</td>
+                <td>4f5f13d59346a803ec98921afd46ce541527bf028612fbc3e6064be7f25c9842</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5996</td>
+                <td>mc-extn-browserhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\McAfee\wps\1.40.161.1\extnhost\mc-extn-browserhost.exe</td>
+                <td>6236770503cda96783e03252e695acec02d53f7e9e9d9b4259c4e16111864202</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6276</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6412</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6216</td>
+                <td>WmiPrvSE.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\wbem\WmiPrvSE.exe</td>
+                <td>c88673d843ed6bce82dbd027105db72330761331f2a4ff710f447979461976f1</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6264</td>
+                <td>wps.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPS Office\12.1.0.28032\office6\wps.exe</td>
+                <td>ed49a90969f576124307b519c126cc27ce97f5faa4a9d12a63faa19c4d994ad5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6588</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6428</td>
+                <td>spoolsv.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\spoolsv.exe</td>
+                <td>203b41e436ad06139456313f03e113ff2e9688b4eb47a487cb3e96cead378521</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6860</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6956</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5520</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7156</td>
+                <td>SearchHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe</td>
+                <td>2789b126368ab8172d6d4213236bdda16a7938e5afe833aca8a2ab183bdc4dbf</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>5732</td>
+                <td>mscopilot.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot.exe</td>
+                <td>d01e72206fca3090a4e68ecc64fdc27dbb6a70507665874e47fa077056b718fc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7372</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7008</td>
+                <td>SearchIndexer.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\SearchIndexer.exe</td>
+                <td>0baf4ede2748e0685c23f70c39a708f1d3779d4fc47369f74f1e1d4312cc0351</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6896</td>
+                <td>wps.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPS Office\12.1.0.28032\office6\wps.exe</td>
+                <td>ed49a90969f576124307b519c126cc27ce97f5faa4a9d12a63faa19c4d994ad5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7608</td>
+                <td>mc-vpn.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\McAfee\wps\1.40.161.1\vpn\mc-vpn.exe</td>
+                <td>51198720f28778365dd593ff38cfaa3e472218b3a1ec6e11c56a8a6808a6475b</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7024</td>
+                <td>wps.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPS Office\12.1.0.28032\office6\wps.exe</td>
+                <td>ed49a90969f576124307b519c126cc27ce97f5faa4a9d12a63faa19c4d994ad5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8384</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8488</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8556</td>
+                <td>winlogon.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\winlogon.exe</td>
+                <td>21d6ff2893684361cc5bb56119d319d0283516fb5e4a2de8be9296cbdb0364c1</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8668</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8740</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8852</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7988</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8984</td>
+                <td>mscopilot.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot.exe</td>
+                <td>d01e72206fca3090a4e68ecc64fdc27dbb6a70507665874e47fa077056b718fc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9040</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>2492</td>
+                <td>AvastUI.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Avast Software\Suite\AvastUI.exe</td>
+                <td>84d3c1097cf9924ceea63d3be021079c83bf2ff2c8dc449b92400897d8f61800</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9164</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9332</td>
+                <td>TextInputHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe</td>
+                <td>80d7b3d8e43fbfba0545d663366b39cd59180b755625b3409accbd73de64ee97</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9404</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9476</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8892</td>
+                <td>aswidsagent.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\aswidsagent.exe</td>
+                <td>65efcb4a7eb9a69552b558f75c225f7b3730cacc28a6e9fffcdc0d3482ef6b00</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9568</td>
+                <td>NgcIso.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\NgcIso.exe</td>
+                <td>a35439fab7d5188fe047b580e6ed3aea547453718a4fa854524a8d1d2c213203</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9640</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9672</td>
+                <td>unsecapp.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\wbem\unsecapp.exe</td>
+                <td>16d01ae8ae611dbe5934932e0bda099d9b2f4732c3d2e7dd9b3a96671c3bb209</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9716</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9636</td>
+                <td>IntelAudioService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\intcoed.inf_amd64_a952167d9e98b004\AS\IAS\IntelAudioService.exe</td>
+                <td>078cb573610ed69a612532d58569d9e3dd14dee0f1786e82bcc53ec09a79c192</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9828</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9832</td>
+                <td>taskhostw.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\taskhostw.exe</td>
+                <td>ea8d441df237fb3d3b7a27a95fde186e19c94d58a618f5c29ed5fc13cb155e96</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9888</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9912</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9924</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9948</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9976</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10032</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10116</td>
+                <td>ETDService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\ETDService.exe</td>
+                <td>ab70fc589de4f7cc5e1bfe7a6d1b929db227b5981a1b46c8d1ffc145f4ffb870</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>9612</td>
+                <td>ipf_uf.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\ipf_cpu.inf_amd64_09022c71eac15532\ipf_uf.exe</td>
+                <td>ac3bac9c5886eb5295be540590b7119c0dd14c8d20f2af23f7f091e7d04c8dec</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10152</td>
+                <td>HPCommRecovery.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\HPCommRecovery\HPCommRecovery.exe</td>
+                <td>2a6ca460ff9df2a0d2fa8bebadf74e6af0c6bbb588926fae4998ce38c8cc41f2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10164</td>
+                <td>DtsApo4Service.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DTS\PC\APO4x\DtsApo4Service.exe</td>
+                <td>367631b579b34a67c4e9a87e91e47a62a01859bd4a6c6cc7043dbdc06cc758d2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10144</td>
+                <td>afwServ.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\afwServ.exe</td>
+                <td>38163f1a10945a221d0aea0bf1096c1b0d35bcf779b4adbeea0191bab05f2308</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10132</td>
+                <td>mc-fw-host.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\McAfee\wps\1.40.161.1\mc-fw-host.exe</td>
+                <td>4346523df25c78df6cbd75426221e15f2b018712cea36eec659bdae7dfe6690f</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10180</td>
+                <td>servicehost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\McAfee\WebAdvisor\servicehost.exe</td>
+                <td>6c2abce34aeed10b90f176e2891691170dc461dacc02593ad629e2f212449700</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10224</td>
+                <td>HPPrintScanDoctorService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\HPPrintScanDoctor\HPPrintScanDoctorService.exe</td>
+                <td>c870bbcf86f2b1e30a703ad6695ff8d6b7abb14fe4f2b4c03cb2820a233468de</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10172</td>
+                <td>MpDefenderCoreService.exe</td>
+                <td>Unknown</td>
+                <td>C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26070.9-0\MpDefenderCoreService.exe</td>
+                <td>af108353a1f6848dd0acda83059d781264e5c25b677fef76e781b2854fcde154</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10428</td>
+                <td>conhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\conhost.exe</td>
+                <td>7ced551ec8afab3391a3ede5442046558e4799dcfd631ac9252fe93929a3465e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10216</td>
+                <td>FoxitPDFReaderUpdateService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Common Files\Foxit\Foxit PDF Reader\FoxitPDFReaderUpdateService.exe</td>
+                <td>3821d06c21904a50c6590acd7aeb066fec189d5083fe7c8f396282d3da6ae4b6</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10472</td>
+                <td>RtkBtManServ.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\rtkbtfilter.inf_amd64_a91f769b382735d4\RtkBtManServ.exe</td>
+                <td>de7a833276c250530b0c6c35a05a1210781567516f8abaa178cfcd9e346e0ae2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10492</td>
+                <td>jhi_service.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\dal.inf_amd64_8a3f88e34f6b8385\jhi_service.exe</td>
+                <td>3a927d6b43121450a05c2a107e74ca797fac04ef7d62482770d1b101ee29c117</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10672</td>
+                <td>WMIRegistrationService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\mewmiprov.inf_amd64_b966ea70c5407e74\WMIRegistrationService.exe</td>
+                <td>3472415c63c5df103cf6b415e8ae7dfacaad078df7471c729e9ed5ce65474cc5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10724</td>
+                <td>IntelGraphicsSoftware.Service.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\WindowsApps\AppUp.IntelArcSoftware_26.26.2459.0_x64__8j3eq9eme6ctt\VFS\ProgramFilesX64\Intel\Intel Graphics Software\IntelGraphicsSoftware.Service.exe</td>
+                <td>c3d0c7fb2d74a604212b6f27c175442a0882cb66c45fe264072a13492880d571</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10284</td>
+                <td>bgsvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\bgsvc.exe</td>
+                <td>3ed7616fe30b6954049c29dc407de3a78d668c52f5d6362bea95231b3315384b</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10752</td>
+                <td>AnyDesk.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files (x86)\AnyDesk\AnyDesk.exe</td>
+                <td>d9932c9274f5f9ed710239afb5f6080c18390f9c6aff49802b2ea776ec2cc54c</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>8336</td>
+                <td>ms-teams.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\MSTeams_26213.1006.5014.9784_x64__8wekyb3d8bbwe\ms-teams.exe</td>
+                <td>6d462ffc72aae234d41d905bbdecb6f1022ee8e0fe3cd2b95d6c59aab7b160ec</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10464</td>
+                <td>TuneupSvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\TuneupSvc.exe</td>
+                <td>8ee9aba56b92fc9663d81ee15c61018b64ecaa2d2e989f28e3927d6738f8da33</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>11692</td>
+                <td>ipf_helper.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\ipf_cpu.inf_amd64_09022c71eac15532\ipf_helper.exe</td>
+                <td>25cfea449f47a7b1f30655f08d7d4943fd27972ba662841553b704cf6f9ac1d1</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12228</td>
+                <td>PushNotificationsLongRunningTask.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\MicrosoftCorporationII.WinAppRuntime.Singleton_8002.3.1.0_x64__8wekyb3d8bbwe\PushNotificationsLongRunningTask.exe</td>
+                <td>e57bdd9e4e9c59e356ffc7c5a3bc83281a2a49687a748b16ee802eaa3a333d47</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12264</td>
+                <td>CrossDeviceService.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\MicrosoftWindows.CrossDevice_1.26071.84.0_x64__cw5n1h2txyewy\CrossDeviceService.exe</td>
+                <td>4a8f44949a2ce86ec55babb1cefc63229e4be9d8ab55fadda43fb597d69b94cb</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12400</td>
+                <td>NetworkCap.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\DriverStore\FileRepository\hpcustomcapcomp.inf_amd64_166246cb8bd387ff\x64\NetworkCap.exe</td>
+                <td>c1fb8ba7953d6a4e207a521914c2947ac2b814d13a5dbff46b0e96947c402ffa</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>11012</td>
+                <td>DriverUpdSvc.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\DriverUpdSvc.exe</td>
+                <td>85e104ae283e716dba3b69f32b988efb505ab21effc834093819a9ecb94c7027</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12724</td>
+                <td>AggregatorHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\AggregatorHost.exe</td>
+                <td>49883eaffe02f533304534af2205d1b7f91e0bec5eedbd71a780d15bc92a35b9</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12776</td>
+                <td>conhost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\conhost.exe</td>
+                <td>7ced551ec8afab3391a3ede5442046558e4799dcfd631ac9252fe93929a3465e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12788</td>
+                <td>fontdrvhost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\fontdrvhost.exe</td>
+                <td>d95f4bcdc09eadeb6f2afc9befef1d1a309c9fc72a6d3452871a7d0b7a59134d</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12804</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>10852</td>
+                <td>mysqld.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe</td>
+                <td>1c40b282f3defe814926abb3256790e936b82b62107b1b601eb5b20a5364c366</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>13036</td>
+                <td>conhost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\conhost.exe</td>
+                <td>7ced551ec8afab3391a3ede5442046558e4799dcfd631ac9252fe93929a3465e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>13260</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>13904</td>
+                <td>SystemOptimizer.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\HP\SystemOptimizer\SystemOptimizer.exe</td>
+                <td>35c9d6bbe7705d00a02bf2a4bddfa6448bd828d04eba3ddab0981abc532fea19</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>13944</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>11360</td>
+                <td>mysqld.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe</td>
+                <td>1c40b282f3defe814926abb3256790e936b82b62107b1b601eb5b20a5364c366</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>14356</td>
+                <td>PresentMonService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\WindowsApps\AppUp.IntelArcSoftware_26.26.2459.0_x64__8j3eq9eme6ctt\VFS\ProgramFilesX64\Intel\Intel Graphics Software\PresentMonService.exe</td>
+                <td>47bae8f37f9a3190e2548b09be9af7faf68402ac935d13f083ac8a6eb57bc7d8</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>14740</td>
+                <td>cmd.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\cmd.exe</td>
+                <td>8dd1ebb0b969370c70a5ee7f7ee347949aa7046aa5e1a33fcd7b1e9415b21fc3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>14364</td>
+                <td>conhost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\conhost.exe</td>
+                <td>7ced551ec8afab3391a3ede5442046558e4799dcfd631ac9252fe93929a3465e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>14884</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>14936</td>
+                <td>ETDCtrl.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\ETDCtrl.exe</td>
+                <td>a7ae610c1f3e34db670c571a549d7e1f50901ad22a42103be2d8d9d17d5f78e3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>15060</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>16388</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>14820</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>16832</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>16964</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe</td>
+                <td>1c40b282f3defe814926abb3256790e936b82b62107b1b601eb5b20a5364c366</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>16664</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17560</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17632</td>
+                <td>OmenCommandCenterBackground.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\AD2F1837.OMENCommandCenter_1101.2608.1.0_x64__v10z8vjag6ke6\OmenCommandCenterApp\OmenCommandCenterBackground.exe</td>
+                <td>43c79ab8d3633e915de5b0327f981c67782f64062f3758db0c3a3ba7b3d48c8a</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17728</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17836</td>
+                <td>SecurityHealthSystray.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\SecurityHealthSystray.exe</td>
+                <td>129cc582d72581f1459c7a9ac8b020dcd3642fae6a69acc26c680190494970db</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17120</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17232</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>13000</td>
+                <td>mysqld.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe</td>
+                <td>1c40b282f3defe814926abb3256790e936b82b62107b1b601eb5b20a5364c366</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18120</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18084</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18520</td>
+                <td>WhatsApp.Root.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2632.100.0_x64__cv1g1gvanyjgm\WhatsApp.Root.exe</td>
+                <td>93c058f09ac0dd35bb4e5a3ed6cb0a4e49912afbc5cb4cc6842f7d68ec862c77</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18204</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18624</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18616</td>
+                <td>FileSyncHelper.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Microsoft OneDrive\26.145.0728.0010\FileSyncHelper.exe</td>
+                <td>f9a2810d2f24ec0d170ad7b5a0dc660cf1c672e156724f2d88f928a6575d2afa</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18772</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19200</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19412</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18684</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19612</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19636</td>
+                <td>OmenInstallMonitor.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\HP\OmenInstallMonitor\OmenInstallMonitor.exe</td>
+                <td>3fdbe7ed20df17102d6422d04964a2d9cf5ccf559087c451cfaabaa226d41ddd</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19644</td>
+                <td>promecefpluginhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPS Office\12.1.0.28032\office6\promecefpluginhost.exe</td>
+                <td>69e452357d80248068c89b3fb83e2b8871d3477c74215d4ea6d66293ac53a03e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19932</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>19448</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>20228</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>17900</td>
+                <td>AvastUI.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Avast Software\Suite\AvastUI.exe</td>
+                <td>84d3c1097cf9924ceea63d3be021079c83bf2ff2c8dc449b92400897d8f61800</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>20244</td>
+                <td>aswEngSrv.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Avast Software\Suite\aswEngSrv.exe</td>
+                <td>f974c1c74a4b5bf7436481024d76612cfaedda06e30e5321629f51b5ca7d49bb</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>20640</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>21132</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>21472</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>20656</td>
+                <td>HPSystemEventUtilityBackground.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\AD2F1837.HPSystemEventUtility_3.2.24.0_x64__v10z8vjag6ke6\SystemEventUtility\HPSystemEventUtilityBackground.exe</td>
+                <td>167d9c45a816329d29e5f96f4894aed9f15a721d152ba6200da15285de992ae2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>20224</td>
+                <td>browserhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\McAfee\WebAdvisor\browserhost.exe</td>
+                <td>fa38ab2d3442bfa3e5d011591d14dff64a763bd720a61f3f8e03db70cd6437e3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>21796</td>
+                <td>HPSystemEventUtilityHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\AD2F1837.HPSystemEventUtility_3.2.24.0_x64__v10z8vjag6ke6\SystemEventUtility\HPSystemEventUtilityHost.exe</td>
+                <td>a4d8e25674000a397c47d92566a8ed041c8ee36e93ed8a96e4d911b8781b237e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>21820</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22180</td>
+                <td>mc-neo-host.exe</td>
+                <td>Unknown</td>
+                <td>C:\ProgramData\McAfee\wps\content\neo-core\26.7.0.146\mc-neo-host.exe</td>
+                <td>d323e63534e770a18af7c42eb5e0d44e226b8250f9c9e13bf2cffeeb418dc737</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22212</td>
+                <td>FileCoAuth.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Microsoft OneDrive\26.145.0728.0010\FileCoAuth.exe</td>
+                <td>f863e3ae2dccc463061b69f36ecba5d9fa99a63dc2aed6ae6909efde4f6b5a35</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22220</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22244</td>
+                <td>cmd.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\cmd.exe</td>
+                <td>8dd1ebb0b969370c70a5ee7f7ee347949aa7046aa5e1a33fcd7b1e9415b21fc3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22636</td>
+                <td>SecurityHealthService.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\SecurityHealthService.exe</td>
+                <td>2e6c93dd683b4be2fac8be2a6395f90c1fdbd98706e21ec8cf572d0d5488f59e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22744</td>
+                <td>DesktopExtension.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\AD2F1837.myHP_58.52629.10977.0_x64__v10z8vjag6ke6\win32\DesktopExtension.exe</td>
+                <td>135ff4d45304724efed2fe9afc0a5e0a3c9afcf4fcba1ea2c79e06226c0e1ff1</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22852</td>
+                <td>mscopilot.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot.exe</td>
+                <td>d01e72206fca3090a4e68ecc64fdc27dbb6a70507665874e47fa077056b718fc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22888</td>
+                <td>HPMediaNetwork.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\HP\HP Media Network\HPMediaNetwork.exe</td>
+                <td>fe4f0dff6d93072a5f726b3846cc67b5431a128f39d53c9bc28f305081e7d3c3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22932</td>
+                <td>sihost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\sihost.exe</td>
+                <td>966370de32a41fae5c26cca0ad3a4797536d09b7dd2a13656608623c67905a10</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>21832</td>
+                <td>AvastUI.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Avast Software\Suite\AvastUI.exe</td>
+                <td>84d3c1097cf9924ceea63d3be021079c83bf2ff2c8dc449b92400897d8f61800</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23140</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23084</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23156</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23164</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23576</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23296</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23716</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>3384</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>1360</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23852</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24076</td>
+                <td>WidgetService.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.19.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe</td>
+                <td>c9ef9e2982d1816954fbb4a184eb509034f82bcc958bdd443075d80e35af04ba</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23868</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>404</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24408</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\explorer.exe</td>
+                <td>c5e95f643581ffd5eda5b6bac0dea664208357037e074d65cde6d5f10bc2c083</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24420</td>
+                <td>uihost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\McAfee\WebAdvisor\uihost.exe</td>
+                <td>5d745c31b732ebaf9b556cc0086ffac84d2d508d05fc23383c49f27d44b1460e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24624</td>
+                <td>dasHost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\dasHost.exe</td>
+                <td>6669401b1a5094796ee8581b8a370b27ca41ce61a8a0876e7c02db6cc9534f24</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24684</td>
+                <td>promecefpluginhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPS Office\12.1.0.28032\office6\promecefpluginhost.exe</td>
+                <td>69e452357d80248068c89b3fb83e2b8871d3477c74215d4ea6d66293ac53a03e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24884</td>
+                <td>WmiPrvSE.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\wbem\WmiPrvSE.exe</td>
+                <td>c88673d843ed6bce82dbd027105db72330761331f2a4ff710f447979461976f1</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>25336</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>6584</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24396</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>25540</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>25728</td>
+                <td>conhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\conhost.exe</td>
+                <td>7ced551ec8afab3391a3ede5442046558e4799dcfd631ac9252fe93929a3465e</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>26084</td>
+                <td>ShellHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\ShellHost.exe</td>
+                <td>bee1bf7af1d7bfed6a52642aa22d8e1df6f7126fe4f1251a94520d4b87ae3a70</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>26160</td>
+                <td>ReconsentNotification.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\AD2F1837.HPPrivacySettings_1.6.2.0_x64__v10z8vjag6ke6\DialogHost\ReconsentNotification.exe</td>
+                <td>a7ccfc05fc1c8cea6361987f66e9ade6c34459460f12951081fb9ba1436dc837</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>26540</td>
+                <td>LinkedIn.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\7EE7776C.LinkedInforWindows_3.0.43.0_x64__w1wdnht996qgy\LinkedIn.exe</td>
+                <td>8521523e89d40402c2e91159a6aed8c95760ebfb2e352a57bae25824781b3d86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>24516</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>26564</td>
+                <td>CrossDeviceResume.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe</td>
+                <td>45e6fc9cf9d692afbc63820587d9cb05d3eed5692d51ee71bbc91665cf5eb609</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>26940</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27432</td>
+                <td>OverlayHelper.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\HP\Overlay\OverlayHelper.exe</td>
+                <td>0964b0174dd59095feb6eab86e5c419ba53f6f0532e7427fa24be1d575360735</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7172</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>25492</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27632</td>
+                <td>wps.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPSOFF~1\1210~1.280\office6\wps.exe</td>
+                <td>ed49a90969f576124307b519c126cc27ce97f5faa4a9d12a63faa19c4d994ad5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27588</td>
+                <td>OneDrive.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Microsoft OneDrive\OneDrive.exe</td>
+                <td>c8a608b535474a942a4ba218403725ff9104f7a7237ad33aebae2346fdfa865a</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>7932</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27680</td>
+                <td>mscopilot.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilot.exe</td>
+                <td>d01e72206fca3090a4e68ecc64fdc27dbb6a70507665874e47fa077056b718fc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>28856</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27748</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27804</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>28148</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>29608</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>29892</td>
+                <td>backgroundTaskHost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\backgroundTaskHost.exe</td>
+                <td>b7d2c17e0038945aa4b72ae7a89e54d29b04ccc0feb62df5c9b7b67de43c2530</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>29916</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>30256</td>
+                <td>dllhost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\dllhost.exe</td>
+                <td>0f65717e0217dda26363dfca545f150a837551ea4887fdac711c309257a3e284</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>28964</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>29468</td>
+                <td>mc-fw-host.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\McAfee\wps\1.40.161.1\mc-fw-host.exe</td>
+                <td>4346523df25c78df6cbd75426221e15f2b018712cea36eec659bdae7dfe6690f</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>30576</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>30320</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>30984</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31076</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31124</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>27148</td>
+                <td>M365Copilot.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_19.2608.46011.0_x64__8wekyb3d8bbwe\M365Copilot.exe</td>
+                <td>c83befb811eb380282579fd77d0a4f12ffd5017558b795be9d0cf8d739562e4b</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31268</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31300</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31416</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31492</td>
+                <td>RuntimeBroker.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\RuntimeBroker.exe</td>
+                <td>61597bf6b9daeaeaef0080b57ad2838f34f007a6cd024420e7c196c0dea97c86</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Kingsoft\WPS Office\12.1.0.28032\office6\wpscloudsvr.exe</td>
+                <td>0f455a3cc797ff1b5f6c947285649203ac4ccc0a1d0f900a0b7e43435d41eeb0</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31476</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>25872</td>
+                <td>ms-teams.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\MSTeams_26213.1006.5014.9784_x64__8wekyb3d8bbwe\ms-teams.exe</td>
+                <td>6d462ffc72aae234d41d905bbdecb6f1022ee8e0fe3cd2b95d6c59aab7b160ec</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31656</td>
+                <td>smartscreen.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\smartscreen.exe</td>
+                <td>2af496c24c1def94006da19e6e5940715067ba8afd482fe4c7c944e882ec43a3</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>30636</td>
+                <td>AvastUI.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Avast Software\Suite\AvastUI.exe</td>
+                <td>84d3c1097cf9924ceea63d3be021079c83bf2ff2c8dc449b92400897d8f61800</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>31852</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32244</td>
+                <td>msedgewebview2.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files (x86)\Microsoft\EdgeWebView\Application\151.0.4129.101\msedgewebview2.exe</td>
+                <td>c693cbb4a92aca983016de36a09845f5ac637487cdc3afa13df4ee5cd579d5d5</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32496</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32536</td>
+                <td>dwm.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\dwm.exe</td>
+                <td>fecf4f6ee00878f6ccbe41c89c809a066cf3c412ed1f91585ae8c79842c3294a</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32552</td>
+                <td>MicrosoftStartFeedProvider.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\WindowsApps\Microsoft.StartExperiencesApp_1.380.2.0_x64__8wekyb3d8bbwe\MicrosoftStartFeedProvider\MicrosoftStartFeedProvider.exe</td>
+                <td>ee0baf58a0eed30b2182c1b8e2dfcd8e0e411aff821d3912ceee5a774f96fc25</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32564</td>
+                <td>csrss.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\csrss.exe</td>
+                <td>a958083fd4982697973d1f4a05a8f51b1f5d551a558cfa0097cfb6867fdce3ba</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32632</td>
+                <td>svchost.exe</td>
+                <td>Unknown</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32988</td>
+                <td>svchost.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Windows\System32\svchost.exe</td>
+                <td>1222a44a5fdb4efde4dfcb41093648627950e7ec02d8667f1c26ccae31d922e2</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32080</td>
+                <td>bgapp.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Avast Software\Suite\bgapp.exe</td>
+                <td>4a1c42f1d9b9d78bbbee58308a0c6e5dd65e38396341fec4f03d1b891a8ead91</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32712</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>33256</td>
+                <td>chrome.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Program Files\Google\Chrome\Application\chrome.exe</td>
+                <td>4fded80ee837952ebb94f1117e15528f4e6448c868825022f3982712a7819cda</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>32280</td>
+                <td>OfficeClickToRun.exe</td>
+                <td>Unknown</td>
+                <td>C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe</td>
+                <td>ee090b1a58485acc8154973f42e932f34e5683b1f1c1700825bdb2b8821ea116</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>18052</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>22116</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>23592</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>30460</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+            <tr>
+                <td>29004</td>
+                <td>Code.exe</td>
+                <td>HPLAP\Abina</td>
+                <td>C:\Users\Abina\AppData\Local\Programs\Microsoft VS Code\Code.exe</td>
+                <td>89a4782956166ee1e987d3a424e3f70a8ce1493c5e858b2d4dea9caaf47402bc</td>
+                <td>Low</td>
+                <td>No obvious indicators</td>
+                <td>Unchecked</td>
+            </tr>
+            
+
+    </table>
+
+    <h2>
+        Network Connections
+    </h2>
+
+    <table>
+
+        <tr>
+            <th>PID</th>
+            <th>Process</th>
+            <th>Local Address</th>
+            <th>Remote Address</th>
+            <th>State</th>
+        </tr>
+
+        
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>192.168.100.121:56132</td>
+                <td>34.79.204.55:7500</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>28148</td>
+                <td>chrome.exe</td>
+                <td>0.0.0.0:5353</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>192.168.100.121:58858</td>
+                <td>104.18.39.21:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:57349</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:53866</td>
+                <td>34.117.223.223:443</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:63101</td>
+                <td>2600:1901:0:47fc:::443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>3924</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:49667</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6276</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:3702</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>6276</td>
+                <td>svchost.exe</td>
+                <td>:::3702</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49272</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>2820</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:49666</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>0.0.0.0:445</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>25872</td>
+                <td>ms-teams.exe</td>
+                <td>0.0.0.0:50078</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12025</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:58627</td>
+                <td>40.104.56.226:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:27275</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>fe80::c6c6:85c2:2295:22e6:59119</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>192.168.100.121:50428</td>
+                <td>34.98.110.65:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:59782</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>32080</td>
+                <td>bgapp.exe</td>
+                <td>127.0.0.1:61111</td>
+                <td>127.0.0.1:61112</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>9976</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:500</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>1852</td>
+                <td>lsass.exe</td>
+                <td>0.0.0.0:49664</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>2401:4900:4844:ed93:b005:e76b:39d0:3778:2177</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>192.168.100.121:137</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>:::56737</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>192.168.100.121:55055</td>
+                <td>190.92.199.178:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:50303</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>:::5353</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:64549</td>
+                <td>2603:1063:2001:1909::365:ff1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6428</td>
+                <td>spoolsv.exe</td>
+                <td>0.0.0.0:49668</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:49708</td>
+                <td>2606:4700:83b2:7cbc:c2fe:59f:5ff2:75c4:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>::1:59121</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12993</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>1824</td>
+                <td>services.exe</td>
+                <td>:::49673</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>192.168.100.121:49935</td>
+                <td>3.111.241.224:443</td>
+                <td>CLOSE_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:54370</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>192.168.56.1:138</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>0.0.0.0:3306</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>:::56377</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>27588</td>
+                <td>OneDrive.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:49866</td>
+                <td>2603:1040:a06:6:::443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>1676</td>
+                <td>wininit.exe</td>
+                <td>:::49665</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>:::5357</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49273</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>8488</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:5050</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12995</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>:::5355</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:5353</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12119</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>22116</td>
+                <td>Code.exe</td>
+                <td>192.168.100.121:56312</td>
+                <td>20.184.175.9:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>127.0.0.1:49676</td>
+                <td>127.0.0.1:49677</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:53865</td>
+                <td>34.117.223.223:443</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:2177</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>10172</td>
+                <td>MpDefenderCoreService.exe</td>
+                <td>192.168.100.121:54566</td>
+                <td>20.42.73.24:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>0.0.0.0:33060</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:58624</td>
+                <td>2603:1063:2001:1909::365:ff1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6276</td>
+                <td>svchost.exe</td>
+                <td>:::64449</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>27588</td>
+                <td>OneDrive.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:53087</td>
+                <td>2603:1061:13f0:2c0f::365:590:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>10032</td>
+                <td>svchost.exe</td>
+                <td>127.0.0.1:52921</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>127.0.0.1:4709</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6276</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:64448</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>10752</td>
+                <td>AnyDesk.exe</td>
+                <td>0.0.0.0:50001</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12025</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>fe80::6b9f:d585:57f5:dd04:1900</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>fe80::6b9f:d585:57f5:dd04:59120</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>2820</td>
+                <td>svchost.exe</td>
+                <td>:::49666</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:64550</td>
+                <td>2603:1063:2001:1909::365:ff1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>192.168.100.121:59123</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>21832</td>
+                <td>AvastUI.exe</td>
+                <td>192.168.100.121:62061</td>
+                <td>34.111.24.1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>192.168.100.121:2177</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12110</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>10752</td>
+                <td>AnyDesk.exe</td>
+                <td>:::7070</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>0.0.0.0:5353</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>192.168.100.121:1900</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:27275</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12993</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:63819</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>:::59782</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>22116</td>
+                <td>Code.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:56535</td>
+                <td>2a04:4e42:92::684:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>9976</td>
+                <td>svchost.exe</td>
+                <td>:::500</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>7024</td>
+                <td>wps.exe</td>
+                <td>192.168.100.121:55057</td>
+                <td>190.92.199.178:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:62098</td>
+                <td>20.42.65.88:443</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12995</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12563</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>0.0.0.0:5357</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>22116</td>
+                <td>Code.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:54565</td>
+                <td>2603:1061:14:153::1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>10752</td>
+                <td>AnyDesk.exe</td>
+                <td>0.0.0.0:7070</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:5355</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>9976</td>
+                <td>svchost.exe</td>
+                <td>:::4500</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12143</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>192.168.100.121:57591</td>
+                <td>166.108.200.175:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>127.0.0.1:59124</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>8488</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:5040</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>192.168.100.121:139</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:53864</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>:::445</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:50426</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>5272</td>
+                <td>MsMpEng.exe</td>
+                <td>192.168.100.121:53868</td>
+                <td>57.155.141.122:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12563</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49276</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>0.0.0.0:56737</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>192.168.56.1:59122</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12110</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>3924</td>
+                <td>svchost.exe</td>
+                <td>:::49667</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12143</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>25872</td>
+                <td>ms-teams.exe</td>
+                <td>192.168.100.121:57594</td>
+                <td>52.175.141.53:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>28148</td>
+                <td>chrome.exe</td>
+                <td>:::5353</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>127.0.0.1:49674</td>
+                <td>127.0.0.1:49675</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>32080</td>
+                <td>bgapp.exe</td>
+                <td>127.0.0.1:61112</td>
+                <td>127.0.0.1:61111</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>::1:12465</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>127.0.0.1:1900</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:63377</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:64546</td>
+                <td>2603:1063:2001:1909::365:ff1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>:::33060</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>3572</td>
+                <td>OneDrive.Sync.Service.exe</td>
+                <td>::1:42050</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:64547</td>
+                <td>2603:1063:2001:1909::365:ff1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12423</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>192.168.100.121:138</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>18084</td>
+                <td>msedgewebview2.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:50961</td>
+                <td>2a03:2880:f368:120:face:b00c:0:167:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>10284</td>
+                <td>bgsvc.exe</td>
+                <td>192.168.100.121:51212</td>
+                <td>34.79.204.55:7500</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6428</td>
+                <td>spoolsv.exe</td>
+                <td>:::49668</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>10752</td>
+                <td>AnyDesk.exe</td>
+                <td>192.168.100.121:49868</td>
+                <td>148.113.17.91:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>fe80::c6c6:85c2:2295:22e6:2177</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49271</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>0.0.0.0:59106</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>1824</td>
+                <td>services.exe</td>
+                <td>0.0.0.0:49673</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>:::5353</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:58634</td>
+                <td>52.98.63.50:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>::1:1900</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12119</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>13944</td>
+                <td>msedgewebview2.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:61482</td>
+                <td>2603:1040:f02:e::152:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>2064</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:135</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>192.168.56.1:2177</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:62097</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>192.168.100.121:49849</td>
+                <td>192.168.100.1:53</td>
+                <td>TIME_WAIT</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:49264</td>
+                <td>2606:4700:83b1:d8b7:9afe:59f:ccf5:ac50:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>127.0.0.1:12465</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>1852</td>
+                <td>lsass.exe</td>
+                <td>:::49664</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49274</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:60825</td>
+                <td>2404:6800:4000:1025::bc:5228</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:64548</td>
+                <td>2603:1063:2001:1909::365:ff1:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>:::59106</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>127.0.0.1:49677</td>
+                <td>127.0.0.1:49676</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>32364</td>
+                <td>chrome.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:63570</td>
+                <td>2a03:2880:f334:120:face:b00c:0:167:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>2776</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:56377</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>25872</td>
+                <td>ms-teams.exe</td>
+                <td>:::50078</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>127.0.0.1:49675</td>
+                <td>127.0.0.1:49674</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>1676</td>
+                <td>wininit.exe</td>
+                <td>0.0.0.0:49665</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49277</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>5188</td>
+                <td>AvastSvc.exe</td>
+                <td>192.168.100.121:53085</td>
+                <td>104.77.173.8:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>10492</td>
+                <td>jhi_service.exe</td>
+                <td>::1:49670</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>9976</td>
+                <td>svchost.exe</td>
+                <td>0.0.0.0:4500</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>192.168.56.1:1900</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>192.168.56.1:139</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>2064</td>
+                <td>svchost.exe</td>
+                <td>:::135</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>12716</td>
+                <td>mysqld.exe</td>
+                <td>:::3306</td>
+                <td>0.0.0.0:0</td>
+                <td>LISTEN</td>
+            </tr>
+            
+            <tr>
+                <td>6632</td>
+                <td>svchost.exe</td>
+                <td>fe80::c6c6:85c2:2295:22e6:1900</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>17464</td>
+                <td>svchost.exe</td>
+                <td>fe80::6b9f:d585:57f5:dd04:2177</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>31532</td>
+                <td>wpscloudsvr.exe</td>
+                <td>192.168.100.121:61490</td>
+                <td>119.8.160.175:11111</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>24100</td>
+                <td>explorer.exe</td>
+                <td>192.168.100.121:49275</td>
+                <td>52.110.14.168:443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>System</td>
+                <td>192.168.56.1:137</td>
+                <td>0.0.0.0:0</td>
+                <td>NONE</td>
+            </tr>
+            
+            <tr>
+                <td>5220</td>
+                <td>svchost.exe</td>
+                <td>2401:4900:4844:ed93:b4b3:7f99:75e1:bab0:49583</td>
+                <td>2603:1040:a06:6:::443</td>
+                <td>ESTABLISHED</td>
+            </tr>
+            
+
+    </table>
+
+</body>
+
+</html>
